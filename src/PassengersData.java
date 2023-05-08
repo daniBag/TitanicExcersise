@@ -217,7 +217,6 @@ public class PassengersData {
         query.resetFilters();
         query.setEmbarked(port);
         List<Passenger> filterByPort = query.filterPassengers(this.filteredList);
-        double percent = calculateSurvivalPercentage(filterByPort.size(), survivorsCount(filterByPort));
-        return percent;
+        return calculateSurvivalPercentage(filterByPort.size(), survivorsCount(filterByPort));
     }
 }

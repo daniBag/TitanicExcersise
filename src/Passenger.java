@@ -11,10 +11,9 @@ public class Passenger{
     private double fare;
     private String cabin;
     private String embarked;
-    public Passenger(){}
     public Passenger(String line){
         String[] passengerDetails = line.split(Constants.SEPARATOR);
-        if (passengerDetails.length == 12){
+        if (passengerDetails.length == Constants.SPLIT_LENGTH){
             passengerDetails = embarkedMissingInfo(passengerDetails);
         }
         this.passengerId = Integer.valueOf(passengerDetails[0]);
@@ -25,7 +24,7 @@ public class Passenger{
         }
         //TODO: constants
         this.pClass = Integer.valueOf(passengerDetails[2]);
-        this.name = removeQuotes(passengerDetails[3] + "," + passengerDetails[4]);
+        this.name = removeQuotes(passengerDetails[3] + Constants.SEPARATOR + passengerDetails[4]);
         this.sex = passengerDetails[5];
         if (passengerDetails[6].equals("")){
             this.age = null;

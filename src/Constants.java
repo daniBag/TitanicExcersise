@@ -10,6 +10,7 @@ public class Constants {
     public static final String[] SEX_OPTIONS = { "All", "male", "female"};
     public static final String[] PORT_OPTIONS = { "All", "Cherbourg", "Queenstown", "Southampton"};
     public static final int MARGIN_FROM_TOP = 10;
+    public static final int SPLIT_LENGTH = 12;
     public static final int MARGIN_FROM_LEFT = 5;
     public static final int LABEL_WIDTH = 270;
     public static final int LABEL_HEIGHT = 30;

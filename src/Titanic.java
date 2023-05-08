@@ -1,5 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
 
 class Titanic extends JFrame {
     public static PassengersData passengersData;
